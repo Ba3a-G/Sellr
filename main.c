@@ -40,8 +40,7 @@ void read_from_file(struct property *records, int *num_records)
     char line[100];
     while (fgets(line, 100, fp) != NULL)
     {
-        sscanf(line, "%[^,],%[^,],%d", records[*num_records].address,
-               records[*num_records].type, &records[*num_records].price);
+        sscanf(line, "%[^,],%[^,],%d", records[*num_records].address, records[*num_records].type, &records[*num_records].price);
         (*num_records)++;
     }
     // Close file
@@ -82,8 +81,7 @@ void display_record(struct property *records, int num_records) {
     {
         if (records[i].price > 0)
         {
-            printf("%-20s %-20s Rs %-9d\n", records[i].address,
-                   records[i].type, records[i].price);
+            printf("%-20s %-20s Rs %-9d\n", records[i].address, records[i].type, records[i].price);
         }
     }
 }
